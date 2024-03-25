@@ -1,0 +1,28 @@
+
+<div class="flex justify-center items-center min-h-[100vh] bg-[linear-gradient(90deg,hsla(213,77%,14%,1)_0%,hsla(202,27%,45%,1)100%)]">
+    <div class="flex flex-col items-center w-[90%] md:w-[80%] lg:w-2/5  gap-2 shadow p-8 bg-[linear-gradient(90deg,hsla(233,100%,90%,1)_0%,hsla(0,0%,89%,1)100%)]">
+      <h2>Hi <strong class="text-[hsla(197,65%,42%,1)]">{{ quizResult.name }}</strong> , Here's your quiz results </h2>
+      <table class="w-full md:w-[80%]  border-spacing-0 ">
+        <tr class=" bg-[linear-gradient(90deg,hsla(288,20%,75%,1)_0%,hsla(197,65%,42%,1)100%)] gap-0">
+          <td class=" p-3 text-center border-none">Score</td>
+          <td class=" p-3 border-none">{{ quizResult.score }}</td>
+        </tr>
+        <tr class=" bg-[linear-gradient(90deg,hsla(288,20%,75%,1)_0%,hsla(197,65%,42%,1)100%)]">
+          <td class=" p-3 text-center border-none">Percentage</td>
+          <td class=" p-3 border-none">{{ quizResult.percentage }}</td>
+        </tr>
+        <tr class="bg-[linear-gradient(90deg,hsla(288,20%,75%,1)_0%,hsla(197,65%,42%,1)100%)]">
+          <td class=" p-3 text-center border-none">Correct</td>
+          <td class=" p-3 border-none">{{ quizResult.correct }}</td>
+        </tr>
+        <tr class="bg-[linear-gradient(90deg,hsla(288,20%,75%,1)_0%,hsla(197,65%,42%,1)100%)]">
+          <td class=" p-3 text-center border-none">In Correct</td>
+          <td class=" p-3 border-none">{{ quizResult.inCorrect }}</td>
+        </tr>
+        <tr class="bg-[linear-gradient(90deg,hsla(288,20%,75%,1)_0%,hsla(197,65%,42%,1)100%)]">
+          <td class=" p-3 text-center border-none">Un Attempt</td>
+          <td class=" p-3 border-none">{{ quizResult.unAttempt }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>

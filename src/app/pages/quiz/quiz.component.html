@@ -1,0 +1,28 @@
+<div class="flex justify-center items-center min-h-[100vh] bg-[linear-gradient(90deg,hsla(213,77%,14%,1)_0%,hsla(202,27%,45%,1)100%)]">
+    @if (currentQuestion) {
+    <div class="flex flex-col justify-center items-center text-lg  w-[90%] lg:w-6/12 gap-2 shadow p-8 bg-[linear-gradient(90deg,hsla(233,100%,90%,1)_0%,hsla(0,0%,89%,1)100%)] ">
+     <h4 class="text-lg">{{quizInfo.name}}</h4>
+     <!-- Question -->
+     <div class="w-full p-4 shadow mb-2">
+        <p>{{currentQuestion.content}}</p>
+     </div>
+     <!-- Options -->
+     @for (option of currentQuestion.options; track option) {
+     <div class="w-full flex items-center p-1.5 shadow mb-2 cursor-pointer" (click)="currentSelectedOptionId=option.id">
+        <mat-radio-button color="primary" [value]="option.id" [checked]="currentSelectedOptionId==option.id"></mat-radio-button>
+        <p>{{option.content}}</p>
+     </div>
+    }
+
+    <div class="w-full flex justify-end">
+        <!-- If current question is last question then shows submit button otherwise save & next button -->
+        @if (currentQuestionNo==quizInfo.questions.length-1) {
+            <button mat-raised-button color="primary" (click)="submit()"> Submit</button>
+        }
+        @else {
+            <button mat-raised-button color="primary" (click)="next()"> Save & Next </button>
+        }
+    </div>
+    </div>
+}
+  </div>
