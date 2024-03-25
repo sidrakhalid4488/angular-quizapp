@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:quizapp": "node dist/quizapp/server/server.mjs",
-    "server":"json-server --watch db.json"
+    "server":"npx json-server --watch db.json"
   },
   "private": true,
   "dependencies": {
